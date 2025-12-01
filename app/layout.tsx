@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "کتاب‌فروشی آنلاین",
@@ -13,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="min-h-screen bg-gray-50">{children}</body>
+      <body className="min-h-screen bg-gray-50">
+        <CartProvider>
+          <Header />
+          <main className="container mx-auto px-4 py-8">{children}</main>
+        </CartProvider>
+      </body>
     </html>
   );
 }
