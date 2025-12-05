@@ -1,18 +1,36 @@
-export default function Home() {
+import { getBooks } from "@/lib/api";
+import { BookCard } from "@/components/book/BookCard";
+import { BookSearch } from "@/components/book/‌BookSearch";
+
+export default async function Home() {
+  const books = await getBooks();
+
   return (
-    <div className="container mx-auto px-4 py-16 text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        📚 کتاب‌فروشی آنلاین
-      </h1>
-      <p className="text-gray-600 text-lg mb-8">
-        به زودی بهترین کتاب‌ها در دسترس شما خواهد بود
-      </p>
-      <div className="bg-white rounded-lg shadow-md p-8 max-w-md mx-auto">
-        <p className="text-gray-700 mb-4">پروژه در حال توسعه است...</p>
-        <div className="flex justify-center gap-2">
-          <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
-          <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce [animation-delay:0.1s]"></div>
-          <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+    <div className="min-h-screen">
+      <div className="bg-linear-to-r from-blue-600 to-blue-800 text-white py-12 mb-8">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            کتاب‌فروشی آنلاین
+          </h1>
+          <p className="text-xl text-center opacity-90">
+            بهترین کتاب‌ها را با بهترین قیمت بخرید
+          </p>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 mb-8">
+        <BookSearch />
+      </div>
+
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          کتاب‌های پیشنهادی
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {books.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
         </div>
       </div>
     </div>
