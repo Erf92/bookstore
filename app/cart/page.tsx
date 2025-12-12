@@ -146,7 +146,6 @@ export default function CartPage() {
             </div>
           </div>
 
-          {/* خلاصه سفارش */}
           <div className="lg:w-1/3 mt-8 lg:mt-0">
             <div className="bg-white rounded-xl shadow-sm p-6 sticky top-6">
               <h2 className="text-xl font-bold text-gray-900 mb-6">

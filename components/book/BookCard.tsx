@@ -57,7 +57,6 @@ export function BookCard({ book }: BookCardProps) {
           </div>
         )}
 
-        {/* دکمه‌ها */}
         <div className="flex gap-2">
           <Link
             href={`/books/${book.id}`}
