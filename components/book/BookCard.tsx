@@ -15,7 +15,7 @@ export function BookCard({ book }: BookCardProps) {
 
   return (
     <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative w-full h-64 overflow-hidden">
         <Image
           src={book.cover}
           alt={book.title}
