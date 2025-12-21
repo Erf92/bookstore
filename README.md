@@ -2,6 +2,10 @@
 
 یک پروژه فروشگاه کتاب مدرن ساخته شده با Next.js 16، React 19 و TypeScript
 
+## 🚀 Live Demo
+
+👉 https://bookstore-wine-pi.vercel.app
+
 ## 🚀 ویژگی‌های پروژه
 
 - ✅ صفحه اصلی با لیست کتاب‌ها
@@ -79,6 +83,4 @@ Loading States: با Suspense
 | ورود | ثبت‌نام |
 |------|---------|
 | ![ورود](/screenshots/login.png) | ![ثبت‌نام](/screenshots/register.png) |
-
-Live Demo: [live](https://bookstore-wine-pi.vercel.app)
 ```
