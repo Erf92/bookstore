@@ -80,5 +80,5 @@ Loading States: با Suspense
 |------|---------|
 | ![ورود](/screenshots/login.png) | ![ثبت‌نام](/screenshots/register.png) |
 
-Live Demo: https://bookstore-wine-pi.vercel.app
+Live Demo: [live](https://bookstore-wine-pi.vercel.app)
 ```
