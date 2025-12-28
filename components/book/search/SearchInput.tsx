@@ -1,5 +1,6 @@
 "use client";
 
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { Search, X, Filter } from "lucide-react";
 import { useTransition } from "react";
 
@@ -24,6 +25,7 @@ export function SearchInput({
   isPending,
 }: SearchInputProps) {
   const [, startTransition] = useTransition();
+  const isMobile = useIsMobile();
 
   return (
     <div className="relative">
@@ -37,7 +39,11 @@ export function SearchInput({
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="جستجوی کتاب بر اساس عنوان، نویسنده، موضوع..."
+            placeholder={
+              isMobile
+                ? "جستجوی کتاب..."
+                : "جستجوی کتاب بر اساس عنوان، نویسنده، موضوع..."
+            }
             className="w-full px-6 py-4 pr-12 pl-36 bg-white border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition-all"
             disabled={isPending}
           />
