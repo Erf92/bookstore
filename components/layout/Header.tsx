@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b shadow-sm">
       <nav className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex gap-5 sm:gap-0 justify-between items-center">
           <Link
             href="/"
             className="flex items-center gap-2 text-2xl font-bold text-blue-600"
